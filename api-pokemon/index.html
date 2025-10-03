@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex por Geração</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokédex por Geração</h1>
+            <p class="subtitle">Explore os Pokémons de cada geração e descubra onde encontrá-los</p>
+        </header>
+
+        <main id="main-content">
+            <!-- Menu de Gerações -->
+            <section id="generation-menu" class="generation-menu">
+                <h2>Selecione uma Geração</h2>
+                <div class="generation-grid">
+                    <button class="generation-card" data-generation="1">
+                        <div class="generation-covers">
+                            <img src="images/red.jpg" alt="Red">
+                            <img src="images/blue.jpg" alt="Blue">
+                            <img src="images/yellow.jpg" alt="Yellow">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Red/Green/Blue</div>
+                            <div class="generation-year">1996</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="2">
+                        <div class="generation-covers">
+                            <img src="images/gold.jpg" alt="Gold">
+                            <img src="images/silver.jpg" alt="Silver">
+                            <img src="images/crystal.jpg" alt="Crystal">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Gold/Silver/Crystal</div>
+                            <div class="generation-year">1999</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="3">
+                        <div class="generation-covers">
+                            <img src="images/ruby.jpg" alt="Ruby">
+                            <img src="images/sapphire.jpg" alt="Sapphire">
+                            <img src="images/emerald.jpg" alt="Emerald">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Ruby/Sapphire/Emerald</div>
+                            <div class="generation-year">2002</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="4">
+                        <div class="generation-covers">
+                            <img src="images/diamond.jpg" alt="Diamond">
+                            <img src="images/pearl.jpg" alt="Pearl">
+                            <img src="images/platinum.jpg" alt="Platinum">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Diamond/Pearl/Platinum</div>
+                            <div class="generation-year">2006</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="5">
+                        <div class="generation-covers">
+                            <img src="images/black.jpg" alt="Black">
+                            <img src="images/white.jpg" alt="White">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Black/White</div>
+                            <div class="generation-year">2010</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="6">
+                        <div class="generation-covers">
+                            <img src="images/x.jpg" alt="X">
+                            <img src="images/y.jpg" alt="Y">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">X/Y</div>
+                            <div class="generation-year">2013</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="7">
+                        <div class="generation-covers">
+                            <img src="images/sunmoon.jpg" alt="Sun/Moon">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Sun/Moon</div>
+                            <div class="generation-year">2016</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="8">
+                        <div class="generation-covers">
+                            <img src="images/sword.jpg" alt="Sword">
+                            <img src="images/shield.jpg" alt="Shield">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Sword/Shield</div>
+                            <div class="generation-year">2019</div>
+                        </div>
+                    </button>
+                    <button class="generation-card" data-generation="9">
+                        <div class="generation-covers">
+                            <img src="images/scarletviolet.jpg" alt="Scarlet/Violet">
+                        </div>
+                        <div class="generation-info">
+                            <div class="generation-name">Scarlet/Violet</div>
+                            <div class="generation-year">2022</div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Lista de Pokémons -->
+            <section id="pokemon-list" class="pokemon-list hidden">
+                <div class="pokemon-list-header">
+                    <button id="back-button" class="back-button">← Voltar</button>
+                    <h2 id="generation-title">Geração I</h2>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Buscar Pokémon...">
+                    </div>
+                </div>
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Carregando Pokémons...</p>
+                </div>
+                <div id="pokemon-grid" class="pokemon-grid"></div>
+            </section>
+
+            <!-- Detalhes do Pokémon -->
+            <section id="pokemon-details" class="pokemon-details hidden">
+                <div class="pokemon-details-header">
+                    <button id="back-to-list-button" class="back-button">← Voltar à Lista</button>
+                </div>
+                <div id="pokemon-details-content"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
